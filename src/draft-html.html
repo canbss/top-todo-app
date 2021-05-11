@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Todo App</title>
+</head>
+<body>
+    <!--Container incorporetes all component -->
+    <div id="container">
+
+        <!--Header component-->
+        <div id="header">Todo App</div>
+
+        <!--Vertical bar compotent-->
+        <div id="ver-bar">
+            <div id="quick-todos-card" class="ver-bar-card">
+                <i class="material-icons">add</i>
+                <p>Quick Todos</p>
+            </div>
+            <div id="project-todos-add-card" class="ver-bar-card">
+                    <i class="material-icons">add</i>
+                    <p>Project</p>
+                <div id="project-input">
+                    <input type="text" name="project-name-input" id="project-name-input" placeholder="Project name">
+                    <span class="material-icons todo-card-remove-add-icons">done</span>
+                </div>
+            </div>
+            <div class="project-todos-card">
+                <span class="material-icons">arrow_right</span>
+                <p>Project 1</p>
+            </div>
+            <div class="project-todos-card">
+                <span class="material-icons">arrow_right</span>
+                <p>Project 2</p>
+            </div>
+        </div>
+
+        <!--Board component that includes user todos-->
+        <div id="board">
+            <div id="board-header">
+                <div id="board-title">Quick Todos</div>
+                <div id="board-icons">
+                    <i class="material-icons" id="board-header-add-icon">add</i>
+                    <span class="material-icons" id="board-header-filter-icon">filter_alt</span>
+                </div>
+            </div>
+            <div id="board-infos">
+                <div class="board-info">Priority</div>
+                <div class="board-info">Title</div>
+                <div class="board-info">Note</div>
+                <div class="board-info">Due date</div>
+                <div class="board-info">Change</div>
+            </div>
+            <div class="todo-card">
+                <span class="material-icons board-info" id="todo-circ">circle</span>
+                <p id="todo-title" class="board-info">New Task</p>
+                <span class="material-icons board-info todo-card-remove-add-icons">more_horiz</span>
+                <p id="date" class="board-info">10/09/2020</p>
+                <div id="todo-remove-check" class="board-info">
+                    <span class="material-icons todo-card-remove-add-icons">delete</span>
+                    <span class="material-icons todo-card-remove-add-icons">done</span>
+                </div>
+            </div>
+        </div>
+
+            <!--Component for adding new todos-->
+            <form action="" id="add-todo-card">
+                <div class="form-cancel"><i class="material-icons cancel-icon">add</i></div>
+                <label for="title-add-input">Title</label>
+                <input type="text" name="title-add-input" id="title-add-input" required placeholder="Title">
+                <label for="note-add-input">Note</label>
+                <textarea name="note-add-input" id="note-add-input" required></textarea>
+                <label for="due-date-add-input">Due date</label>
+                <input type="date" name="due-date-add-input" id="due-date-add-input" required>
+                <div id="priority-radios">
+                    <label for="high-p">High</label>
+                    <input type="radio" name="priortiy" id="high-p" value="high">
+                    <label for="moderate-p">Moderate</label>
+                    <input type="radio" name="priortiy" id="moderate-p" value="moderate">
+                    <label for="low-p">Low</label>
+                    <input type="radio" name="priortiy" id="low-p" value="low">
+                </div>
+                <button type="submit"><span class="material-icons">done</span></button>
+            </form>
+
+            <!--Filter component-->
+            <div id="filter-cards">
+                <div class="form-cancel"><i class="material-icons cancel-icon">add</i></div>
+                <div class= "filter-card" id="filter-priority-asc"><p>Priority</p><span class="material-icons">arrow_upward</span></div>
+                <div class= "filter-card" id="filter-priority-desc"><p>Priority</p><span class="material-icons">arrow_downward</span></div>
+                <div class= "filter-card" id="filter-date-asc"><p>Due date</p><span class="material-icons">arrow_upward</span></div>
+                <div class= "filter-card" id="filter-date-desc"><p>Due date</p><span class="material-icons">arrow_downward</span></div>
+            </div>
+
+            <!--Component for displaying notes from todos-->
+            <div id="display-notes">
+                <div class="form-cancel"><i class="material-icons cancel-icon">add</i></div>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaa</p>
+            </div>
+            
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
